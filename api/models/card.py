@@ -9,6 +9,7 @@ class Card(models.Model):
   status = models.CharField(max_length=20)
   owner = models.ForeignKey(
       get_user_model(),
+      related_name='cards',
       on_delete=models.CASCADE
   )
 
@@ -21,5 +22,5 @@ class Card(models.Model):
     return {
         'id': self.id,
         'notes': self.notes,
-        'status': self.status,
+        'status': self.status
     }

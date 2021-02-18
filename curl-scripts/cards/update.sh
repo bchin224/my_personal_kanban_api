@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:8000/mangos/${ID}" \
+curl "http://localhost:8000/cards/${ID}" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \
@@ -8,7 +8,7 @@ curl "http://localhost:8000/mangos/${ID}" \
   --data '{
     "card": {
       "notes": "'"${NOTES}"'",
-      "status": "'"${STATUS}"'",
+      "status": "'"${STATUS}"'"
     }
   }'
 

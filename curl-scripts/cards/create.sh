@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:8000/cards" \
+curl "http://localhost:8000/cards/" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
@@ -8,7 +8,7 @@ curl "http://localhost:8000/cards" \
   --data '{
     "card": {
       "notes": "'"${NOTES}"'",
-      "status": "'"${STATUS}"'",
+      "status": "'"${STATUS}"'"
     }
   }'
 

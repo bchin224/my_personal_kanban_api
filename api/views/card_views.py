@@ -19,7 +19,7 @@ class Cards(generics.ListCreateAPIView):
         # Get all the cardss:
         # cards = Card.objects.all()
         # Filter the cards by owner, so you can only see your owned kanban cards
-        cards = Cango.objects.filter(owner=request.user.id)
+        cards = Card.objects.filter(owner=request.user.id)
         # Run the data through the serializer
         data = CardSerializer(cards, many=True).data
         return Response({ 'cards': data })
