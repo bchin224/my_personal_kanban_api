@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 class Card(models.Model):
   # define fields
   # https://docs.djangoproject.com/en/3.0/ref/models/fields/
-  notes = models.CharField(max_length=100)
+  notes = models.CharField(max_length=200)
   status = models.CharField(max_length=20)
   owner = models.ForeignKey(
       get_user_model(),

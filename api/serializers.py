@@ -13,7 +13,7 @@ class MangoSerializer(serializers.ModelSerializer):
 class CardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Card
-        fields = ('notes', 'status', 'owner')
+        fields = ('id', 'notes', 'status', 'owner')
 
 class UserSerializer(serializers.ModelSerializer):
     # This model serializer will be used for User creation
